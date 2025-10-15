@@ -19,8 +19,5 @@ public class Eating extends AbstractState {
         getJuca().addHunger(-5);
         printStats("Comendo...");
 
-        if(getJuca().getHunger() <= 0) {
-            getJuca().setState(new Working(getJuca()));
-        }
     }
 }

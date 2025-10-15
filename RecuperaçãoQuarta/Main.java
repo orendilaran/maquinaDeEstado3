@@ -3,10 +3,9 @@ public class Main {
     static Horario Horario = new Horario();
         
 public static void main(String[] args) {
-        
-        while(true) {
             Juca Charlinho = new Charlinho();
             Juca Joaozin = new Joaozin();
+        while(true) {
             getRelogio().Display();
             Charlinho.update();
             Joaozin.update();

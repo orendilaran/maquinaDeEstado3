@@ -1,4 +1,4 @@
-public interface State {
+ public interface State {
     Juca getJuca();
     void printStats(String status);
 

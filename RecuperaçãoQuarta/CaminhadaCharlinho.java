@@ -5,15 +5,14 @@ public class CaminhadaCharlinho extends AbstractState {
 
     @Override
     public void enter() {
-        System.out.println("Hora de ir ao trabalho!");
+        System.out.println("Esta na Hora da Jornada Para Escola");
     }
 
     @Override
     public void execute() {
-        getJuca().addHunger(2);
-        getJuca().addFatigue(5);
-        printStats("Limpando o Caminhão...");
-
+        getJuca().addHunger(1);
+        getJuca().addFatigue(4);
+        printStats("Andando na estrada de pedra e barro...");
     }
 }
 

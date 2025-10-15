@@ -3,6 +3,12 @@ public abstract class AbstractState implements State {
     public AbstractState(Juca juca) {
         this.juca = juca;
     }
+    public AbstractState(Charlinho juca) {
+        this.juca = juca;
+    }
+    public AbstractState(Joaozin juca) {
+        this.juca = juca;
+    }
 
     @Override
     public Juca getJuca() {
@@ -12,8 +18,8 @@ public abstract class AbstractState implements State {
     @Override
     public void printStats(String state) {
         System.out.println(state);
-        System.out.println("Fome: " + juca.getHunger());
-        System.out.println("Cansaço: " + juca.getFatigue());
+        System.out.println("Fome: "+ juca.getPreHunger() +" -->" +juca.getHunger());
+        System.out.println("Cansaço: "+ juca.getPreFatigue() +" -->" + + juca.getFatigue());
     }
 
     @Override
