@@ -11,7 +11,8 @@ public class Horario {
         }
     }
     public void Display(){
-        System.out.println(Horario+":00");
+        System.out.println("---------------------");
+        System.out.println("São: "+Horario+":00");
     }
 
 }

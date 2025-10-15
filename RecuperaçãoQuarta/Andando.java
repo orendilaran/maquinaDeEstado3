@@ -11,15 +11,7 @@ public class Andando extends AbstractState {
     @Override
     public void execute() {
         getJuca().addHunger(1);
-        getJuca().addFatigue(-10);
+        getJuca().addFatigue(3);
         printStats("Andando...");
-
-        if (getJuca().getFatigue() <= 0) {
-            if (getJuca().getHunger() <= 10) {
-                getJuca().setState(new Working(getJuca()));
-            } else {
-                getJuca().setState(new Eating(getJuca()));
-            }
-        }
     }
 }

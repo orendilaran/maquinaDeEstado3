@@ -15,12 +15,5 @@ public class Sleeping extends AbstractState {
         getJuca().addFatigue(-10);
         printStats("Dormindo...");
 
-        if (getJuca().getFatigue() <= 0) {
-            if (getJuca().getHunger() <= 10) {
-                getJuca().setState(new Working(getJuca()));
-            } else {
-                getJuca().setState(new Eating(getJuca()));
-            }
-        }
     }
 }

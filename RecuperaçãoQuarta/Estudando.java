@@ -10,8 +10,8 @@ public class Estudando extends AbstractState {
 
     @Override
     public void execute() {
-        getJuca().addHunger(1);
-        getJuca().addFatigue(-10);
+        getJuca().addHunger(3);
+        getJuca().addFatigue(2);
         printStats("Estudando...");
     }
 }
