@@ -5,7 +5,7 @@ public class Andando extends AbstractState {
     }
     @Override
     public void enter() {
-        System.out.println("Bora Se Movimentar...");
+        System.out.println("Tenho que ir...");
     }
 
     @Override

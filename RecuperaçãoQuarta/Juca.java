@@ -31,9 +31,16 @@ public class Juca {
     }
 
     public void setState(State state) {
+        if (this.state != state){
         this.state.leave();
         this.state = state;
-        state.enter();
+        state.enter();}
+    }
+    public int getPreFatigue() {
+        return PreviewFatigue;
+    }
+    public int getPreHunger() {
+        return PreviewHunger;
     }
     public int getPreFatigue() {
         return PreviewFatigue;

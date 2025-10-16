@@ -21,14 +21,21 @@ public class Charlinho extends Juca{
                 }
             else{
                 setState(new CaminhadaCharlinho(this));
+                progresso += 1;
             }
+            if (progresso == 3){
+                setState(new Estudando(this));
+            }
+        }
+        if(Main.getRelogio().getHorario() > 18 && Main.getRelogio().getHorario() < 22){
+            setState(new CaminhadaCharlinho(this));
         }
         if(Main.getRelogio().getHorario() > 21 && Main.getRelogio().getHorario() < 24){ //  NOITE em Casa Depois de ir escola
             if (getHunger() > 15){
                 setState(new Eating(this));
             }
             else {
-            if (getFatigue() > 70){
+            if (getFatigue() > 100){
                 setState(new Sleeping(this));
             }
             else {
@@ -38,6 +45,7 @@ public class Charlinho extends Juca{
         }
         if(Main.getRelogio().getHorario() >= 0 && Main.getRelogio().getHorario() < 8){ //  MUITO TARDE
             setState(new Sleeping(this));
+            acordou = false;
         }
     }
 }
