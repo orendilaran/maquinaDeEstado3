@@ -11,6 +11,7 @@ public class Working extends AbstractState {
 
     @Override
     public void execute() {
+        System.out.println("test");
         getJuca().addHunger(2);
         getJuca().addFatigue(5);
         printStats("Limpando o Caminhão...");

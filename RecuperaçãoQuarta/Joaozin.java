@@ -6,9 +6,7 @@ public class Joaozin extends Juca{
         System.out.println("-------Joaozin-------");
         state.execute();
         if(Main.getRelogio().getHorario() > 7 && Main.getRelogio().getHorario() < 14){ //  MANHA, em Casa antes de ir escola
-            if (getFatigue() < 0 && acordou == false){
-                acordou = true;}
-            if (acordou == true){
+            if (getFatigue() < 20){
                 if (getHunger() > 15){
                     setState(new Eating(this));
                 }
@@ -19,7 +17,7 @@ public class Joaozin extends Juca{
             
         }
         if(Main.getRelogio().getHorario() > 13&& Main.getRelogio().getHorario() < 19){ //  TARDE, indo e estando na escola
-            if (getHunger() > 25){
+            if (getHunger() > 5){
                     System.out.println("indo almoçar");
                     setState(new Eating(this)); 
                 }

@@ -42,4 +42,10 @@ public class Juca {
     public int getPreHunger() {
         return PreviewHunger;
     }
+    public int getPreFatigue() {
+        return PreviewFatigue;
+    }
+    public int getPreHunger() {
+        return PreviewHunger;
+    }
 }

@@ -12,7 +12,8 @@ public class CaminhadaCharlinho extends AbstractState {
     public void execute() {
         getJuca().addHunger(1);
         getJuca().addFatigue(4);
-        printStats("Andando na estrada de pedra e barro...");
+        printStats("Limpando o Caminhão...");
+
     }
 }
 

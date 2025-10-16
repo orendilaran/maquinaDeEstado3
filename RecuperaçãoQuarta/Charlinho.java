@@ -1,14 +1,10 @@
 public class Charlinho extends Juca{
-    private int progresso = 0;
-    private boolean acordou = true;
     @Override
     public void update() {
         System.out.println("------Charlinho------");
         state.execute();
         if(Main.getRelogio().getHorario() > 7 && Main.getRelogio().getHorario() < 13){ //  MANHA, em Casa antes de ir escola
-            if (getFatigue() < 0 && acordou == false){
-                acordou = true;}
-            if (acordou == true){
+            if (getFatigue() < 20){
                 if (getHunger() > 15){
                     setState(new Eating(this));
                 }
@@ -19,7 +15,7 @@ public class Charlinho extends Juca{
             
         }
         if(Main.getRelogio().getHorario() > 12&& Main.getRelogio().getHorario() < 19){ //  TARDE, indo e estando na escola
-            if (getHunger() > 25 && progresso < 3){
+            if (getHunger() > 5){
                     System.out.println("indo almoçar");
                     setState(new Eating(this)); 
                 }
